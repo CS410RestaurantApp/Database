@@ -111,9 +111,7 @@ public class SQLiteJDBC {
 			c = DriverManager.getConnection("jdbc:sqlite:users.db");
 			c.setAutoCommit(false);
 			System.out.println("Opened database successfully");
-
 			stmt = c.createStatement();
-
 			String sql = "INSERT INTO USERS (NAME,PASSWORD) " +
 					"VALUES ('" + inName + "', '" + inPassword + "');";
 			stmt.executeUpdate(sql);
